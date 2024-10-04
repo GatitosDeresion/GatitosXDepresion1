@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redireccionando...</title>
+    <script type="text/javascript">
+        function openTwitterLinks() {
+            // Abrir la aplicación de Twitter usando el deep link
+            window.location.href = "twitter://user?screen_name=gatitodepresion";
+
+            // Pequeño retardo para dar tiempo a la app de abrir y luego abrir la solicitud de seguimiento
+            setTimeout(function() {
+                window.open("https://twitter.com/intent/follow?screen_name=gatitodepresion", "_blank");
+            }, 500);
+        }
+    </script>
+</head>
+<body onload="openTwitterLinks()">
+    <p>Redireccionando a la app de Twitter... Si no eres redirigido automáticamente, <a href="https://twitter.com/intent/follow?screen_name=gatitodepresion">haz clic aquí</a>.</p>
+</body>
+</html>
